@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-
+import './main/props_practice'
+import practice from './main/props_practice';
 const user = {
   firstName:  "Jarin" ,
   lastName: "Tasnim",
@@ -18,6 +19,7 @@ function UserComponent(props) {
     <div>
       <h1>{props.firstName}+" "+{props.lastName}</h1>
       <img src={props.details.url}></img>
+      <h1>{props.greet}</h1>
     </div>
   );
 }
