@@ -5,9 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './main/props_practice'
 import Practice from './main/props_practice';
+import Clock from './main/Component'
+import EventHandle from './main/EventHandle'
 ReactDOM.render(
   <React.StrictMode>
-    <Practice/>
+    <div>
+    <Clock/>
+    <EventHandle greet="Hey dude!" designation="JSE"/>
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
