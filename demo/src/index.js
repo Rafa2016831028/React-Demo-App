@@ -7,11 +7,13 @@ import './main/props_practice'
 import Practice from './main/props_practice';
 import Clock from './main/Component'
 import EventHandle from './main/EventHandle'
+import Page from './main/PreventPageFromRendering';
 ReactDOM.render(
   <React.StrictMode>
     <div>
     <Clock/>
     <EventHandle greet="Hey dude!" designation="JSE"/>
+    <Page/>
     </div>
   </React.StrictMode>,
   document.getElementById('root')
