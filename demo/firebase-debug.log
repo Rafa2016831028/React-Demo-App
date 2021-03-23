@@ -1,0 +1,328 @@
+[debug] [2021-03-23T06:33:33.278Z] ----------------------------------------------------------------------
+[debug] [2021-03-23T06:33:33.280Z] Command:       /home/jarin/.nvm/versions/node/v15.12.0/bin/node /home/jarin/.nvm/versions/node/v15.12.0/bin/firebase init
+[debug] [2021-03-23T06:33:33.280Z] CLI Version:   9.6.1
+[debug] [2021-03-23T06:33:33.280Z] Platform:      linux
+[debug] [2021-03-23T06:33:33.281Z] Node Version:  v15.12.0
+[debug] [2021-03-23T06:33:33.281Z] Time:          Tue Mar 23 2021 12:33:33 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-03-23T06:33:33.281Z] ----------------------------------------------------------------------
+[debug] [2021-03-23T06:33:33.281Z] 
+[debug] [2021-03-23T06:33:33.285Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-23T06:33:33.285Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/jarin/workspace/React-Demo-App/demo
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-03-23T06:38:21.212Z] ----------------------------------------------------------------------
+[debug] [2021-03-23T06:38:21.214Z] Command:       /home/jarin/.nvm/versions/node/v15.12.0/bin/node /home/jarin/.nvm/versions/node/v15.12.0/bin/firebase init
+[debug] [2021-03-23T06:38:21.215Z] CLI Version:   9.6.1
+[debug] [2021-03-23T06:38:21.215Z] Platform:      linux
+[debug] [2021-03-23T06:38:21.215Z] Node Version:  v15.12.0
+[debug] [2021-03-23T06:38:21.215Z] Time:          Tue Mar 23 2021 12:38:21 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-03-23T06:38:21.216Z] ----------------------------------------------------------------------
+[debug] [2021-03-23T06:38:21.216Z] 
+[debug] [2021-03-23T06:38:21.219Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-23T06:38:21.220Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/jarin/workspace/React-Demo-App/demo
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-03-23T06:38:26.765Z] > refreshing access token with scopes: []
+[debug] [2021-03-23T06:38:26.766Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-23T06:38:27.053Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Tue, 23 Mar 2021 06:38:26 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:38:27.067Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-03-23T06:38:27.710Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-03-23T06:38:27.710Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project react-demo-app-944b9 (React-Demo-App) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2021-03-23T06:38:30.568Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-23T06:38:30.569Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-23T06:38:30.765Z] <<< HTTP RESPONSE 200 {"date":"Tue, 23 Mar 2021 06:38:30 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:38:30.800Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/react-demo-app-944b9/services/firebasedatabase.googleapis.com  
+ 
+[debug] [2021-03-23T06:38:32.338Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:38:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2021-03-23T06:38:32.341Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/react-demo-app-944b9/locations/-/instances/react-demo-app-944b9-default-rtdb  
+ 
+[debug] [2021-03-23T06:38:32.867Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:38:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2021-03-23T06:38:55.543Z] >>> HTTP REQUEST GET https://react-demo-app-944b9-default-rtdb.firebaseio.com/.settings/rules.json  
+ 
+[debug] [2021-03-23T06:38:56.594Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Tue, 23 Mar 2021 06:38:56 GMT","content-type":"application/json; charset=utf-8","content-length":"161","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] ✔  Database Rules for react-demo-app-944b9-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2021-03-23T06:38:56.602Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/react-demo-app-944b9/services/firestore.googleapis.com  
+ 
+[debug] [2021-03-23T06:38:58.192Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:38:57 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:38:58.194Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/react-demo-app-944b9  
+ 
+[debug] [2021-03-23T06:38:58.877Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:38:58 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:38:58.878Z] database_type: CLOUD_FIRESTORE
+[debug] [2021-03-23T06:38:58.880Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-23T06:38:58.882Z] > authorizing via signed-in user
+[debug] [2021-03-23T06:38:58.883Z] [iam] checking project react-demo-app-944b9 for permissions ["firebase.projects.get"]
+[debug] [2021-03-23T06:38:58.884Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/react-demo-app-944b9:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-03-23T06:39:00.116Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:38:59 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1007","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2021-03-23T06:39:09.853Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/react-demo-app-944b9/releases?pageSize=10&pageToken=  
+ 
+[debug] [2021-03-23T06:39:11.719Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:39:11 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:39:11.721Z] Found ruleset: projects/react-demo-app-944b9/rulesets/f345663c-1d28-41f3-8279-49a601a51477
+[debug] [2021-03-23T06:39:11.722Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/react-demo-app-944b9/rulesets/f345663c-1d28-41f3-8279-49a601a51477  
+ 
+[debug] [2021-03-23T06:39:13.064Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:39:12 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:39:13.316Z] Error: EISDIR: illegal operation on a directory, open '/home/jarin/workspace/React-Demo-App/demo'
+    at Object.openSync (node:fs:505:3)
+    at Object.writeFileSync (node:fs:1535:35)
+    at Config.writeProjectFile (/home/jarin/.nvm/versions/node/v15.12.0/lib/node_modules/firebase-tools/lib/config.js:156:8)
+    at /home/jarin/.nvm/versions/node/v15.12.0/lib/node_modules/firebase-tools/lib/init/features/firestore/rules.js:50:27
+    at processTicksAndRejections (node:internal/process/task_queues:94:5)
+    at async Object.doSetup [as firestore] (/home/jarin/.nvm/versions/node/v15.12.0/lib/node_modules/firebase-tools/lib/init/features/firestore/index.js:35:5)
+    at async init (/home/jarin/.nvm/versions/node/v15.12.0/lib/node_modules/firebase-tools/lib/init/index.js:19:9)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2021-03-23T06:39:18.657Z] ----------------------------------------------------------------------
+[debug] [2021-03-23T06:39:18.659Z] Command:       /home/jarin/.nvm/versions/node/v15.12.0/bin/node /home/jarin/.nvm/versions/node/v15.12.0/bin/firebase init
+[debug] [2021-03-23T06:39:18.659Z] CLI Version:   9.6.1
+[debug] [2021-03-23T06:39:18.659Z] Platform:      linux
+[debug] [2021-03-23T06:39:18.659Z] Node Version:  v15.12.0
+[debug] [2021-03-23T06:39:18.660Z] Time:          Tue Mar 23 2021 12:39:18 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-03-23T06:39:18.660Z] ----------------------------------------------------------------------
+[debug] [2021-03-23T06:39:18.660Z] 
+[debug] [2021-03-23T06:39:18.664Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-23T06:39:18.664Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/jarin/workspace/React-Demo-App/demo
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-03-23T06:39:22.762Z] > refreshing access token with scopes: []
+[debug] [2021-03-23T06:39:22.763Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-23T06:39:23.077Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Tue, 23 Mar 2021 06:39:22 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:39:23.092Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-03-23T06:39:23.727Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-03-23T06:39:23.727Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project react-demo-app-944b9 (React-Demo-App) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2021-03-23T06:39:25.983Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-23T06:39:25.983Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-23T06:39:26.160Z] <<< HTTP RESPONSE 200 {"date":"Tue, 23 Mar 2021 06:39:26 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:39:26.166Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/react-demo-app-944b9/services/firebasedatabase.googleapis.com  
+ 
+[debug] [2021-03-23T06:39:27.701Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:39:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2021-03-23T06:39:27.704Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/react-demo-app-944b9/locations/-/instances/react-demo-app-944b9-default-rtdb  
+ 
+[debug] [2021-03-23T06:39:28.233Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:39:28 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2021-03-23T06:39:36.042Z] >>> HTTP REQUEST GET https://react-demo-app-944b9-default-rtdb.firebaseio.com/.settings/rules.json  
+ 
+[debug] [2021-03-23T06:39:37.059Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Tue, 23 Mar 2021 06:39:36 GMT","content-type":"application/json; charset=utf-8","content-length":"161","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] ✔  Database Rules for react-demo-app-944b9-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2021-03-23T06:39:37.066Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/react-demo-app-944b9/services/firestore.googleapis.com  
+ 
+[debug] [2021-03-23T06:39:38.534Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:39:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:39:38.536Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/react-demo-app-944b9  
+ 
+[debug] [2021-03-23T06:39:39.230Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:39:39 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:39:39.231Z] database_type: CLOUD_FIRESTORE
+[debug] [2021-03-23T06:39:39.232Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-23T06:39:39.233Z] > authorizing via signed-in user
+[debug] [2021-03-23T06:39:39.233Z] [iam] checking project react-demo-app-944b9 for permissions ["firebase.projects.get"]
+[debug] [2021-03-23T06:39:39.234Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/react-demo-app-944b9:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-03-23T06:39:40.483Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:39:40 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1025","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2021-03-23T06:39:42.442Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/react-demo-app-944b9/releases?pageSize=10&pageToken=  
+ 
+[debug] [2021-03-23T06:39:43.830Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:39:43 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:39:43.832Z] Found ruleset: projects/react-demo-app-944b9/rulesets/f345663c-1d28-41f3-8279-49a601a51477
+[debug] [2021-03-23T06:39:43.833Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/react-demo-app-944b9/rulesets/f345663c-1d28-41f3-8279-49a601a51477  
+ 
+[debug] [2021-03-23T06:39:45.233Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:39:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2021-03-23T06:39:51.691Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1/projects/react-demo-app-944b9/databases/(default)/collectionGroups/-/indexes  
+ 
+[debug] [2021-03-23T06:39:51.692Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1/projects/react-demo-app-944b9/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false  
+ 
+[debug] [2021-03-23T06:39:52.541Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:39:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:39:52.590Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:39:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+=== Functions Setup
+[info] 
+[info] A functions directory will be created in your project with a Node.js
+[info] package pre-configured. Functions can be deployed with firebase deploy.
+[info] 
+[debug] [2021-03-23T06:39:52.597Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-23T06:39:52.598Z] > authorizing via signed-in user
+[debug] [2021-03-23T06:39:52.598Z] [iam] checking project react-demo-app-944b9 for permissions ["firebase.projects.get"]
+[debug] [2021-03-23T06:39:52.599Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/react-demo-app-944b9:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-03-23T06:39:53.795Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:39:53 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1023","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:39:53.797Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/react-demo-app-944b9/services/cloudfunctions.googleapis.com:enable  
+ 
+[debug] [2021-03-23T06:39:53.799Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/react-demo-app-944b9/services/runtimeconfig.googleapis.com:enable  
+ 
+[debug] [2021-03-23T06:39:55.247Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:39:55 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:39:55.613Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:39:55 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  Wrote functions/package.json 
+[info] ✔  Wrote functions/.eslintrc.js 
+[info] ✔  Wrote functions/index.js 
+[info] ✔  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-03-23T06:42:07.995Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-03-23T06:42:08.212Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-03-23T06:42:08.213Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"8.3.1","browserURL":"https://www.gstatic.com/firebasejs/8.3.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/8.3.1/firebase.tgz"},"live":{"version":"8.3","browserURL":"https://www.gstatic.com/firebasejs/live/8.3/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/8.3/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js","auth":"https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js","database":"https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js","firestore":"https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js","functions":"https://www.gstatic.com/firebasejs/8.3.1/firebase-functions.js","installations":"https://www.gstatic.com/firebasejs/8.3.1/firebase-installations.js","messaging":"https://www.gstatic.com/firebasejs/8.3.1/firebase-messaging.js","storage":"https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/8.3.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/8.3.1/firebase-remote-config.js","firestore.memory":"https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.memory.js"}}
+[info] i  Skipping write of public/index.html 
+[info] 
+[info] i  Detected a .git folder at /home/jarin/workspace/React-Demo-App 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=175073163&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-03-23T06:42:56.887Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"d99597ba2df2dfe9c37f","redirect_uri":"http://localhost:9005","state":"175073163"}
+[debug] [2021-03-23T06:42:57.461Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Tue, 23 Mar 2021 06:42:57 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, Accept-Encoding, Accept, X-Requested-With","etag":"W/\"04161a06cc3ff5954c1ddadc8a183781\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-6832eced.js gist.github.com/socket-worker-6832eced.js","x-github-request-id":"91E6:650F:18B6BEA:1A10CB5:60598DF0"}
+[debug] [2021-03-23T06:42:57.472Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-03-23T06:42:58.079Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-03-23T06:42:58.079Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Rafa2016831028","id":43328229,"node_id":"MDQ6VXNlcjQzMzI4MjI5","avatar_url":"https://avatars.githubusercontent.com/u/43328229?v=4","gravatar_id":"","url":"https://api.github.com/users/Rafa2016831028","html_url":"https://github.com/Rafa2016831028","followers_url":"https://api.github.com/users/Rafa2016831028/followers","following_url":"https://api.github.com/users/Rafa2016831028/following{/other_user}","gists_url":"https://api.github.com/users/Rafa2016831028/gists{/gist_id}","starred_url":"https://api.github.com/users/Rafa2016831028/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Rafa2016831028/subscriptions","organizations_url":"https://api.github.com/users/Rafa2016831028/orgs","repos_url":"https://api.github.com/users/Rafa2016831028/repos","events_url":"https://api.github.com/users/Rafa2016831028/events{/privacy}","received_events_url":"https://api.github.com/users/Rafa2016831028/received_events","type":"User","site_admin":false,"name":"Jarin Tasnim","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":"I am Passionate for software developping and solving programming problems with logical and analytical skills using data structure and algorithm knowledge.","twitter_username":null,"public_repos":8,"public_gists":0,"followers":25,"following":11,"created_at":"2018-09-17T02:31:56Z","updated_at":"2021-03-23T06:42:56Z","private_gists":0,"total_private_repos":5,"owned_private_repos":5,"disk_usage":58628,"collaborators":3,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as Rafa2016831028 
+[info] 
+[debug] [2021-03-23T06:43:15.697Z] >>> [apiv2][query] GET https://api.github.com/repos/Rafa2016831028/React-Demo-App/actions/secrets/public-key type=owner
+[debug] [2021-03-23T06:43:16.264Z] <<< [apiv2][status] GET https://api.github.com/repos/Rafa2016831028/React-Demo-App/actions/secrets/public-key 200
+[debug] [2021-03-23T06:43:16.265Z] <<< [apiv2][body] GET https://api.github.com/repos/Rafa2016831028/React-Demo-App/actions/secrets/public-key {"key_id":"568250167242549743","key":"tGmtnPIuu3BY4p8rOt4QiQORUqhTIPvFpgM/v9XuH0M="}
+[debug] [2021-03-23T06:43:16.269Z] >>> [apiv2][query] GET https://api.github.com/repos/Rafa2016831028/React-Demo-App [none]
+[debug] [2021-03-23T06:43:16.872Z] <<< [apiv2][status] GET https://api.github.com/repos/Rafa2016831028/React-Demo-App 200
+[debug] [2021-03-23T06:43:16.872Z] <<< [apiv2][body] GET https://api.github.com/repos/Rafa2016831028/React-Demo-App {"id":349002223,"node_id":"MDEwOlJlcG9zaXRvcnkzNDkwMDIyMjM=","name":"React-Demo-App","full_name":"Rafa2016831028/React-Demo-App","private":false,"owner":{"login":"Rafa2016831028","id":43328229,"node_id":"MDQ6VXNlcjQzMzI4MjI5","avatar_url":"https://avatars.githubusercontent.com/u/43328229?v=4","gravatar_id":"","url":"https://api.github.com/users/Rafa2016831028","html_url":"https://github.com/Rafa2016831028","followers_url":"https://api.github.com/users/Rafa2016831028/followers","following_url":"https://api.github.com/users/Rafa2016831028/following{/other_user}","gists_url":"https://api.github.com/users/Rafa2016831028/gists{/gist_id}","starred_url":"https://api.github.com/users/Rafa2016831028/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Rafa2016831028/subscriptions","organizations_url":"https://api.github.com/users/Rafa2016831028/orgs","repos_url":"https://api.github.com/users/Rafa2016831028/repos","events_url":"https://api.github.com/users/Rafa2016831028/events{/privacy}","received_events_url":"https://api.github.com/users/Rafa2016831028/received_events","type":"User","site_admin":false},"html_url":"https://github.com/Rafa2016831028/React-Demo-App","description":"This is a dummy react app that i build while learning react (javascript framework) for my work. I intend to build a shopping app that implement React CRUD operation of different items in frontend.","fork":false,"url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App","forks_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/forks","keys_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/keys{/key_id}","collaborators_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/teams","hooks_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/hooks","issue_events_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/issues/events{/number}","events_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/events","assignees_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/assignees{/user}","branches_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/branches{/branch}","tags_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/tags","blobs_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/git/refs{/sha}","trees_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/git/trees{/sha}","statuses_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/statuses/{sha}","languages_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/languages","stargazers_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/stargazers","contributors_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/contributors","subscribers_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/subscribers","subscription_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/subscription","commits_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/commits{/sha}","git_commits_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/git/commits{/sha}","comments_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/comments{/number}","issue_comment_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/issues/comments{/number}","contents_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/contents/{+path}","compare_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/compare/{base}...{head}","merges_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/merges","archive_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/downloads","issues_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/issues{/number}","pulls_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/pulls{/number}","milestones_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/milestones{/number}","notifications_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/labels{/name}","releases_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/releases{/id}","deployments_url":"https://api.github.com/repos/Rafa2016831028/React-Demo-App/deployments","created_at":"2021-03-18T08:51:16Z","updated_at":"2021-03-22T11:35:57Z","pushed_at":"2021-03-22T11:35:55Z","git_url":"git://github.com/Rafa2016831028/React-Demo-App.git","ssh_url":"git@github.com:Rafa2016831028/React-Demo-App.git","clone_url":"https://github.com/Rafa2016831028/React-Demo-App.git","svn_url":"https://github.com/Rafa2016831028/React-Demo-App","homepage":null,"size":367,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"forks":0,"open_issues":0,"watchers":0,"default_branch":"main","permissions":{"admin":true,"push":true,"pull":true},"temp_clone_token":"","allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"delete_branch_on_merge":false,"network_count":0,"subscribers_count":1}
+[debug] [2021-03-23T06:43:16.877Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/react-demo-app-944b9/serviceAccounts  
+ {"accountId":"github-action-349002223","serviceAccount":{"displayName":"GitHub Actions (Rafa2016831028/React-Demo-App)","description":"A service account with permission to deploy to Firebase Hosting for the GitHub repository Rafa2016831028/React-Demo-App"}}
+[debug] [2021-03-23T06:43:18.547Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:43:18 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:43:18.549Z] >>> HTTP REQUEST GET https://iam.googleapis.com/v1/projects/react-demo-app-944b9/serviceAccounts/github-action-349002223@react-demo-app-944b9.iam.gserviceaccount.com  
+ 
+[debug] [2021-03-23T06:43:18.550Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/react-demo-app-944b9:getIamPolicy  
+ 
+[debug] [2021-03-23T06:43:19.838Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:43:19 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1126","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:43:19.992Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:43:19 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:43:19.994Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/react-demo-app-944b9:setIamPolicy  
+ {"policy":{"version":1,"etag":"BwW+LnNaQ7c=","bindings":[{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-670213470061@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:react-demo-app-944b9@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-7829e@react-demo-app-944b9.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:firebase-adminsdk-7829e@react-demo-app-944b9.iam.gserviceaccount.com","serviceAccount:github-action-349002223@react-demo-app-944b9.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-670213470061@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-7829e@react-demo-app-944b9.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:jarintasnimaugust20@gmail.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-349002223@react-demo-app-944b9.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-349002223@react-demo-app-944b9.iam.gserviceaccount.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-349002223@react-demo-app-944b9.iam.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2021-03-23T06:43:21.826Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:43:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1663","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-23T06:43:21.828Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/react-demo-app-944b9/serviceAccounts/github-action-349002223@react-demo-app-944b9.iam.gserviceaccount.com/keys  
+ {"keyAlgorithm":"KEY_ALG_UNSPECIFIED","privateKeyType":"TYPE_GOOGLE_CREDENTIALS_FILE"}
+[debug] [2021-03-23T06:43:23.439Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Mar 2021 06:43:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] ✔  Created service account github-action-349002223 with Firebase Hosting admin permissions. 
+[debug] [2021-03-23T06:43:23.478Z] >>> [apiv2][query] PUT https://api.github.com/repos/Rafa2016831028/React-Demo-App/actions/secrets/FIREBASE_SERVICE_ACCOUNT_REACT_DEMO_APP_944B9 [none]
+[debug] [2021-03-23T06:43:23.478Z] >>> [apiv2][body] PUT https://api.github.com/repos/Rafa2016831028/React-Demo-App/actions/secrets/FIREBASE_SERVICE_ACCOUNT_REACT_DEMO_APP_944B9 {"encrypted_value":"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","key_id":"568250167242549743"}
+[debug] [2021-03-23T06:43:24.137Z] <<< [apiv2][status] PUT https://api.github.com/repos/Rafa2016831028/React-Demo-App/actions/secrets/FIREBASE_SERVICE_ACCOUNT_REACT_DEMO_APP_944B9 201
+[debug] [2021-03-23T06:43:24.138Z] <<< [apiv2][body] PUT https://api.github.com/repos/Rafa2016831028/React-Demo-App/actions/secrets/FIREBASE_SERVICE_ACCOUNT_REACT_DEMO_APP_944B9 {}
+[info] ✔  Uploaded service account JSON to GitHub as secret FIREBASE_SERVICE_ACCOUNT_REACT_DEMO_APP_944B9. 
+[info] i  You can manage your secrets at https://github.com/Rafa2016831028/React-Demo-App/settings/secrets. 
+[info] 
+[info] 
+[info] ✔  Created workflow file /home/jarin/workspace/React-Demo-App/.github/workflows/firebase-hosting-pull-request.yml 
+[info] 
+[info] i  Action required: Visit this URL to revoke authorization for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] i  Action required: Push any new workflow file(s) to your repo 
+[info] 
+=== Storage Setup
+[info] 
+[info] Firebase Storage Security Rules allow you to define how and when to allow
+[info] uploads and downloads. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2021-03-23T06:45:22.651Z] Error: EISDIR: illegal operation on a directory, open '/home/jarin/workspace/React-Demo-App/demo'
+    at Object.openSync (node:fs:505:3)
+    at Object.writeFileSync (node:fs:1535:35)
+    at Config.writeProjectFile (/home/jarin/.nvm/versions/node/v15.12.0/lib/node_modules/firebase-tools/lib/config.js:156:8)
+    at Object.doSetup [as storage] (/home/jarin/.nvm/versions/node/v15.12.0/lib/node_modules/firebase-tools/lib/init/features/storage.js:25:12)
+    at processTicksAndRejections (node:internal/process/task_queues:94:5)
+    at async init (/home/jarin/.nvm/versions/node/v15.12.0/lib/node_modules/firebase-tools/lib/init/index.js:19:9)
+[error] 
+[error] Error: An unexpected error has occurred.
