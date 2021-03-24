@@ -24,7 +24,7 @@ class EmployeeForm extends React.Component{
     render(){
         return <div>
             <form onSubmit={this.handleSubmit}>
-               <div>
+               <div >
                <label>ID : 
                     <input type="text" value={this.state.value} onChange={this.handleChange}></input>
                 </label>

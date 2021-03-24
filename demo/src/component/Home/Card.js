@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../CSS/card.css';
+ import '../CSS/card.css';
 import { Card, Icon, Image } from 'semantic-ui-react'
 
 class EmployeeCard extends React.Component{
