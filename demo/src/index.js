@@ -4,12 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './main/props_practice'
-import Practice from './main/props_practice';
-import Clock from './main/Component'
-import EventHandle from './main/EventHandle'
-import Page from './main/PreventPageFromRendering';
-import EmployeeForm from './main/form';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Navigation from './component/Navigation'
 
 const firebaseConfig = {
   apiKey: "AIzaSyDpQSjuW6jHNMslzK3zlVVVoCkEojONTUc",
@@ -25,12 +22,9 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 ReactDOM.render(
   <React.StrictMode>
-    <div>
-    {/* <Clock/>
-    <EventHandle greet="Hey dude!" designation="JSE"/>
-    <Page/> */}
-    <EmployeeForm/>
-    </div>
+    <BrowserRouter>
+        <Navigation />
+    </BrowserRouter>, 
   </React.StrictMode>,
   document.getElementById('root')
 );

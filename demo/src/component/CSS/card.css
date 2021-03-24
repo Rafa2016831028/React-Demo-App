@@ -1,0 +1,26 @@
+
+.card_div {
+    position: sticky !important;
+    float: left !important;
+    display: flex !important;
+    justify-content: 'space-evenly' ;
+    margin: 10px;
+    width: 99%;
+    height: 100%;
+    orientation: inherit;
+    align-items:space-between;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+/* 
+.EmployeeCard-main-card {
+  width: 320px !important;
+  height: 415px !important;
+}
+
+.EmployeeCard-img {
+  height: auto !important;
+  max-height: 250px !important;
+  width: auto !important;
+  max-width: 250px !important;
+} */
