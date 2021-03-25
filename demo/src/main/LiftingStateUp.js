@@ -48,6 +48,7 @@ function convertDollarToTaka(dollar){
 }
 
 function tryConvert(amount, convert) {
+    debugger
     const input = parseFloat(amount);
     if(Number.isNaN) { return "" ; }
     const output = convert(input);
@@ -70,7 +71,6 @@ class Calculator extends React.Component{
     }
 
     handleDollarChange(amount){
-        debugger
         this.setState({currancy: 'us' ,amount})
     }
 
