@@ -48,9 +48,8 @@ function convertDollarToTaka(dollar){
 }
 
 function tryConvert(amount, convert) {
-    debugger
     const input = parseFloat(amount);
-    if(Number.isNaN) { return "" ; }
+    if(Number.isNaN(input)) { return "" ; }
     const output = convert(input);
     return output.toString();
 }
