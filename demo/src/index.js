@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './main/props_practice'
 import firebase from 'firebase/app';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 import Navigation from './component/Navigation'
 
 const firebaseConfig = {
