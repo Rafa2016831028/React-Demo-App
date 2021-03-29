@@ -1,7 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import './main/props_practice'
-import practice from './main/props_practice';
+// import './main/props_practice'
+// import practice from './main/props_practice';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 const user = {
   firstName:  "Jarin" ,
   lastName: "Tasnim",
@@ -23,13 +26,16 @@ function UserComponent(props) {
     </div>
   );
 }
+
+
 function App() {
   return (
-    <UserComponent 
-    firstName={user.firstName}
-    lastName={user.lastName}
-    details = {user.details}
-    ></UserComponent>
+    // <UserComponent 
+    // firstName={user.firstName}
+    // lastName={user.lastName}
+    // details = {user.details}
+    // ></UserComponent>
+    <div>Hey</div>
   );
 }
 

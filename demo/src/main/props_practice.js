@@ -1,5 +1,5 @@
 import './props_practice.css';
-
+import React, {Component} from 'react';
 const employee = {
     id: 12,
     details: {
