@@ -1,9 +1,9 @@
 import React ,{Component} from 'react';
-import  data from './data';
+import  GetProductService from './getproductData';
 class FilteredProductTable extends React.Component{
     render(){
         return(<div>
-            <SearchBar></SearchBar>
+            <GetProductService/>
         </div>)
     }
 }
@@ -26,5 +26,13 @@ class SearchBar extends React.Component{
         </div>)
     }
 }
+
+// class ProductTable extends React.Component{
+//     render(){
+//         return(
+            
+//         )
+//     }
+// }
 
 export default FilteredProductTable;

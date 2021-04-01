@@ -1,13 +1,14 @@
 .app {
-    background: #209cee;
+    background: #F0F8FF;
     height: 100vh;
-    padding: 30px;
+    padding-top: 30px;
+    padding-left: 200px;
   }
   
   .todo-list {
     background: #e8e8e8;
     border-radius: 4px;
-    max-width: 400px;
+    max-width: 1400px;
     padding: 5px;
   }
   
@@ -21,4 +22,10 @@
     justify-content: space-between;
     margin-bottom: 6px;
     padding: 3px 10px;
+  }
+
+  .button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
   }
