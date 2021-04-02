@@ -30,7 +30,7 @@ const TodoForm = forwardRef((props, ref) => {
 
     return (<form onSubmit={handleSubmit} className="todo">
         <input  type="text"
-        className="input"
+        className="input2"
         value={todo} 
         onChange={handleChange} ></input>
     </form>)
