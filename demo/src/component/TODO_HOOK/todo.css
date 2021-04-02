@@ -2,7 +2,8 @@
     background: #F0F8FF;
     height: 100vh;
     padding-top: 30px;
-    padding-left: 200px;
+    padding-left: 70px;
+    padding-right: 70px;
   }
   
   .todo-list {
@@ -28,4 +29,6 @@
     background-color: white; 
     color: black; 
     border: 2px solid #008CBA;
+    max-width: 100px;
+    margin: 5px;
   }
