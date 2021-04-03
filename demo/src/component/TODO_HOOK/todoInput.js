@@ -32,6 +32,7 @@ const TodoForm = forwardRef((props, ref) => {
         <input  type="text"
         className="input2"
         value={todo} 
+        placeholder="Write your note."
         onChange={handleChange} ></input>
     </form>)
 });

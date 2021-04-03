@@ -9,7 +9,7 @@
   .todo-list {
     background: #e8e8e8;
     border-radius: 4px;
-    max-width: 1400px;
+    max-width: 100%;
     padding: 5px;
   }
   
@@ -22,7 +22,12 @@
     font-size: 12px;
     justify-content: space-between;
     margin-bottom: 6px;
-    padding: 3px 10px;
+    padding: 3px 10px 10px;
+  }
+
+  .todo-items {
+    display: inline-block;
+    vertical-align: middle;
   }
 
   .button2 {
@@ -39,5 +44,24 @@
     width: 100% !important;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 5px;
    /* padding: 2px 2px 10px 10px; */
+  }
+
+  .property {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+
+  .dropdown {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    max-width: 100px;
+    /* max-height: 40px; */
+    margin: 5px;
+  }
+
+  .search-form {
+    box-sizing: border-box;
   }
