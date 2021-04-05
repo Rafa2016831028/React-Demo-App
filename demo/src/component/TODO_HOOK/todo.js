@@ -38,13 +38,11 @@ function TodoApp(){
   const ref = useRef(null);
 
   const [searchNote , setSearchNote] = useState("");
-  const [todos, setTodos] = React.useState([]);
+  const [todos, setTodos] = React.useState(todoList);
 
   React.useEffect(() => {
     setTodos([...todoList]);
-    window.localStorage.setItem('todo', JSON.stringify(todoList));
     console.log(todos);
-    debugger
   },[]);
     
       React.useEffect(() => {
