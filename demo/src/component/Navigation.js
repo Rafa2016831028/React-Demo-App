@@ -14,22 +14,22 @@ function  Navigation() {
         <div>
             <div>
       <ul className='ul'>
-        <li className='li'><Link to="/">Home</Link></li>
-        <li className='li'><Link to="/register">Register</Link></li>
+        {/* <li className='li'><Link to="/">Home</Link></li> */}
+        {/* <li className='li'><Link to="/register">Register</Link></li>
         <li className='li'><Link to="/salary">Salary</Link></li>
-        <li className='li'><Link to="/search">Search</Link></li>
-        <li className='li'><Link to="/todo">Todo</Link></li>
+        <li className='li'><Link to="/search">Search</Link></li> */}
+        <li className='li'><Link to="/">Todo</Link></li>
         <li className='li'><Link to="/cart">Cart</Link></li>
      	</ul>
    
     </div>
             <main>
             <Switch>
-                <Route path="/" component={Home} exact />
-                <Route path="/register" component={InputForm} />
+                {/* <Route path="/" component={Home} exact /> */}
+                {/* <Route path="/register" component={InputForm} />
                 <Route path="/salary" component={Calculator} />
-                <Route path="/search" component={FilteredProductTable} />
-                <Route path="/todo" component={TodoApp} />
+                <Route path="/search" component={FilteredProductTable} /> */}
+                <Route path="/" component={TodoApp} />
                 <Route path="/cart" component={GetUserDetails} />
                 <Route component={Error} />
             </Switch>
