@@ -20,6 +20,7 @@ const TodoForm = forwardRef((props, ref) => {
     const handleSubmit = e => {
         e.preventDefault();
          if(!todo) return;
+         props.setEditing(false);
         props.addTodo(todo);
         setTodo("");
     }

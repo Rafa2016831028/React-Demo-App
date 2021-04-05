@@ -4,14 +4,19 @@ import React,{ useState , useRef , forwardRef, useImperativeHandle} from 'react'
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import TodoSearch from './todoSearch';
+import { IconContext } from "react-icons";
+import {AiFillStar} from 'react-icons/ai';
+
 const status_options =["Pending","progressing","Completed","Rejected","Postponed"];
 const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
+//AiFillStar
 function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSelect}){
-  // const defaultStatus = status_options[0];
     return <div className="todo" 
     // style={{textDecoration: todo.isImportant? "line-through" : ""}}
     style ={{color:todo.isImportant? "blue": ""}} >
+       <IconContext.Provider value={{color:todo.isImportant? "blue": "", size:"1.5em" , className: "global-class-name" }}>
+            <div  onClick={() => onImportantTodo(index)} ><AiFillStar/></div>
+        </IconContext.Provider>
         <div className="todo-items"> 
         <div>{todo.text}</div>
         <div>{weekday[todo.time.getDay()]}, {todo.time.getDate()}, {todo.time.getMonth()}, {todo.time.getFullYear()}</div></div>
@@ -20,12 +25,12 @@ function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSe
         <Dropdown className="dropdown" options={status_options} onChange={(e) => onStatusSelect(e, index)} value={status_options[todo.status]} placeholder="Status" />
         <button class="button2" onClick={() => onEditTodo(index)}>Edit</button>
         <button  class="button2" onClick={() => onRemoveTodo(index)}>Remove</button>
-        <button class="button2" onClick={() => onImportantTodo(index)}>{todo.isImportant?"Important":"Not Important"}</button>
+        {/* <button class="button2" onClick={() => onImportantTodo(index)}>{todo.isImportant?"Important":"Not Important"}</button> */}
         </div>
     </div>
 }
 
-const todoList =[
+let todoList =[
   { text: "Learn about React" , isImportant: false, time: new Date(), status: 0},
   { text: "Meet friend for lunch" ,isImportant: true, time: new Date() ,status: 1},
   { text: "Build really cool todo app", isImportant: false , time: new Date(),status: 4},
@@ -39,29 +44,26 @@ function TodoApp(){
 
   const [searchNote , setSearchNote] = useState("");
   const [todos, setTodos] = React.useState(todoList);
+  const [editing, setEditing] = useState(true);
 
-  React.useEffect(() => {
-    setTodos([...todoList]);
-    console.log(todos);
-  },[]);
-    
       React.useEffect(() => {
-        const results = todos.filter(todo =>
+        const results = todoList.filter(todo =>
           todo.text.toLowerCase().includes(searchNote.toLowerCase())
         );
         setTodos(results);
       }, [searchNote]);
 
       React.useEffect(() => {
+        // console.log('Something happened')
         window.localStorage.setItem('todo', JSON.stringify(todoList));
       }, [todos]);
 
     
       const addTodo = text =>{
-          const newTodo = [...todos , {text: text,isImportant: false, time: new Date(),status: 0}];
-          setTodos(newTodo);
-          // console.log(newTodo);
-          window.localStorage.setItem('todo', JSON.stringify(newTodo));
+          //  const newTodo = [...todos , {text: text,isImportant: false, time: new Date(),status: 0}];
+          todoList.push({text: text,isImportant: false, time: new Date(),status: 0});
+         // setTodos(newTodo);
+          setTodos(Array.from(todoList));
       }
 
       const onImportantTodo = index =>{
@@ -72,11 +74,15 @@ function TodoApp(){
       }
 
       const onEditTodo = index =>{
-        const newTodo =[...todos];
-        const slicedTodo = newTodo.splice(index,1);
-        setTodos(newTodo); 
-        window.localStorage.setItem('todo', JSON.stringify(todoList));
-        ref.current.editInput(slicedTodo);
+        if(editing) {
+          debugger
+          const slicedTodo = todoList.splice(index,1);
+          setTodos(Array.from(todoList)); 
+          setEditing(false);
+          ref.current.editInput(slicedTodo);
+        } else {
+          alert("Edit one todo at a time.. :)");
+        }
       }
 
       const onRemoveTodo = index =>{
@@ -112,7 +118,7 @@ function TodoApp(){
         />
       ))}
 
-      <TodoForm addTodo={addTodo} ref={ref}/>
+      <TodoForm addTodo={addTodo} ref={ref}  setEditing={() => setEditing(true)}/>
     </div>
   </div>)
 }
