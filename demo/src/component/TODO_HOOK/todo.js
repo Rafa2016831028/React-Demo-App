@@ -25,22 +25,45 @@ function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSe
     </div>
 }
 
+const todoList =[
+  { text: "Learn about React" , isImportant: false, time: new Date(), status: 0},
+  { text: "Meet friend for lunch" ,isImportant: true, time: new Date() ,status: 1},
+  { text: "Build really cool todo app", isImportant: false , time: new Date(),status: 4},
+  { text: "Implement all functional requirement", isImportant: false , time: new Date(),status: 2},
+  { text: "Sync in local storage.", isImportant: false , time: new Date(),status: 3}
+];
+
 function TodoApp(){
 
   const ref = useRef(null);
 
-    const [todos, setTodos] = React.useState([
-        { text: "Learn about React" , isImportant: false, time: new Date(), status: 0},
-        { text: "Meet friend for lunch" ,isImportant: true, time: new Date() ,status: 1},
-        { text: "Build really cool todo app", isImportant: false , time: new Date(),status: 4},
-        { text: "Implement all functional requirement", isImportant: false , time: new Date(),status: 2},
-        { text: "Sync in local storage.", isImportant: false , time: new Date(),status: 3}
-      ]);
+  const [searchNote , setSearchNote] = useState("");
+  const [todos, setTodos] = React.useState([]);
+
+  React.useEffect(() => {
+    setTodos([...todoList]);
+    window.localStorage.setItem('todo', JSON.stringify(todoList));
+    console.log(todos);
+    debugger
+  },[]);
+    
+      React.useEffect(() => {
+        const results = todos.filter(todo =>
+          todo.text.toLowerCase().includes(searchNote.toLowerCase())
+        );
+        setTodos(results);
+      }, [searchNote]);
+
+      React.useEffect(() => {
+        window.localStorage.setItem('todo', JSON.stringify(todoList));
+      }, [todos]);
+
     
       const addTodo = text =>{
-          console.log({text});
           const newTodo = [...todos , {text: text,isImportant: false, time: new Date(),status: 0}];
           setTodos(newTodo);
+          // console.log(newTodo);
+          window.localStorage.setItem('todo', JSON.stringify(newTodo));
       }
 
       const onImportantTodo = index =>{
@@ -54,7 +77,7 @@ function TodoApp(){
         const newTodo =[...todos];
         const slicedTodo = newTodo.splice(index,1);
         setTodos(newTodo); 
-       // debugger
+        window.localStorage.setItem('todo', JSON.stringify(todoList));
         ref.current.editInput(slicedTodo);
       }
 
@@ -65,21 +88,14 @@ function TodoApp(){
       }
 
       const onStatusSelect = (status ,index) =>{
-       // console.log(status);
         let newTodo = [...todos];
         newTodo[index].status = status_options.indexOf(status.value);
-       // console.log(status_options[newTodo[index].status])
        setTodos(newTodo);
-      //  debugger
       }
 
       const searchTodo = searchString =>{
         console.log(searchString);
-        const newTodo =[...todos];
-        debugger
-       // const searchedTodo = newTodo.filter((todo) => (todo.text.toLowerCase().includes(searchString.toLowerCase()) || ) );
-       const searchedTodo = newTodo.filter((todo) => status_options[todo.status].toLowerCase().includes(searchString.toLowerCase()));
-        setTodos(searchedTodo)
+        setSearchNote(searchString);
       }
 
     return(<div className="app">
