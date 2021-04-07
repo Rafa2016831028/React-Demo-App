@@ -65,3 +65,11 @@
   .search-form {
     box-sizing: border-box;
   }
+
+  .customized-dropdown {
+    color:white;
+      width: 100px !important;
+    height: 40px !important;
+    margin: 5px;
+    padding: 2px;
+  }

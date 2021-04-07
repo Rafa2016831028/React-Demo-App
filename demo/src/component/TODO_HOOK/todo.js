@@ -6,10 +6,12 @@ import 'react-dropdown/style.css';
 import TodoSearch from './todoSearch';
 import { IconContext } from "react-icons";
 import {AiFillStar} from 'react-icons/ai';
+import DND from './dragAndDrop';
+
 
 const status_options =["Pending","progressing","Completed","Rejected","Postponed"];
 const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-//AiFillStar
+
 function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSelect}){
     return <div className="todo" 
     // style={{textDecoration: todo.isImportant? "line-through" : ""}}
@@ -22,10 +24,11 @@ function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSe
         <div>{weekday[todo.time.getDay()]}, {todo.time.getDate()}, {todo.time.getMonth()}, {todo.time.getFullYear()}</div></div>
         
         <div className="property">
-        <Dropdown className="dropdown" options={status_options} onChange={(e) => onStatusSelect(e, index)} value={status_options[todo.status]} placeholder="Status" />
+        <Dropdown className="dropdown super-colors" options={status_options} onChange={(e) => onStatusSelect(e, index)} value={status_options[todo.status]} placeholder="Status" />
         <button class="button2" onClick={() => onEditTodo(index)}>Edit</button>
         <button  class="button2" onClick={() => onRemoveTodo(index)}>Remove</button>
         {/* <button class="button2" onClick={() => onImportantTodo(index)}>{todo.isImportant?"Important":"Not Important"}</button> */}
+        
         </div>
     </div>
 }
@@ -54,7 +57,6 @@ function TodoApp(){
       }, [searchNote]);
 
       React.useEffect(() => {
-        // console.log('Something happened')
         window.localStorage.setItem('todo', JSON.stringify(todoList));
       }, [todos]);
 
@@ -86,9 +88,11 @@ function TodoApp(){
       }
 
       const onRemoveTodo = index =>{
-          let newTodo = [...todos];
-          console.log(newTodo.splice(index,1))
-          setTodos(newTodo);
+         // let newTodo = [...todos];
+         // console.log(newTodo.splice(index,1))
+         // setTodos(newTodo);
+         todoList.splice(index, 1);
+         setTodos(Array.from(todoList));
       }
 
       const onStatusSelect = (status ,index) =>{
@@ -104,6 +108,7 @@ function TodoApp(){
 
     return(<div className="app">
       <h1>Todo CRUD</h1>
+      <DND/>
       <TodoSearch searchTodo={searchTodo}/>
     <div className="todo-list">
       {todos.map((todo, index) => (
