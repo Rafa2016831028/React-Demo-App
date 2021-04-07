@@ -9,6 +9,9 @@ import Calculator from './Salary/LiftingStateUp';
 import FilteredProductTable from './Search/Search';
 import TodoApp from '../component/TODO_HOOK/todo.js';
 import GetUserDetails from '../Service/getUserData';
+import DND from './TODO_HOOK/dragAndDrop';
+
+
 function  Navigation() {
     return (
         <div>
@@ -19,6 +22,7 @@ function  Navigation() {
         <li className='li'><Link to="/salary">Salary</Link></li>
         <li className='li'><Link to="/search">Search</Link></li> */}
         <li className='li'><Link to="/">Todo</Link></li>
+        <li className='li'><Link to="/dnd">DND</Link></li>
         <li className='li'><Link to="/cart">Cart</Link></li>
      	</ul>
    
@@ -29,7 +33,8 @@ function  Navigation() {
                 {/* <Route path="/register" component={InputForm} />
                 <Route path="/salary" component={Calculator} />
                 <Route path="/search" component={FilteredProductTable} /> */}
-                <Route path="/" component={TodoApp} />
+                <Route path="/" component={TodoApp} exact />
+                <Route path="/dnd" component={DND} exact />
                 <Route path="/cart" component={GetUserDetails} />
                 <Route component={Error} />
             </Switch>

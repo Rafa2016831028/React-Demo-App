@@ -6,11 +6,16 @@ import 'react-dropdown/style.css';
 import TodoSearch from './todoSearch';
 import { IconContext } from "react-icons";
 import {AiFillStar} from 'react-icons/ai';
-import DND from './dragAndDrop';
+
 
 
 const status_options =["Pending","progressing","Completed","Rejected","Postponed"];
 const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const status_option_modified =[{ value: 'Pending', label: 'Pending', className: 'blue' },
+{ value: 'Progressing', label: 'Progressing', className: 'orange' },
+{ value: 'Completed', label: 'Completed', className: 'green' },
+{ value: 'Rejected', label: 'Rejected', className: 'red' },
+{ value: 'Postponed', label: 'Postponed', className: 'yellow' }];
 
 function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSelect}){
     return <div className="todo" 
@@ -24,7 +29,7 @@ function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSe
         <div>{weekday[todo.time.getDay()]}, {todo.time.getDate()}, {todo.time.getMonth()}, {todo.time.getFullYear()}</div></div>
         
         <div className="property">
-        <Dropdown className="dropdown super-colors" options={status_options} onChange={(e) => onStatusSelect(e, index)} value={status_options[todo.status]} placeholder="Status" />
+        <Dropdown className="dropdown"  options={status_option_modified} onChange={(e) => onStatusSelect(e, index)} value={status_options[todo.status]} placeholder="Status" />
         <button class="button2" onClick={() => onEditTodo(index)}>Edit</button>
         <button  class="button2" onClick={() => onRemoveTodo(index)}>Remove</button>
         {/* <button class="button2" onClick={() => onImportantTodo(index)}>{todo.isImportant?"Important":"Not Important"}</button> */}
@@ -33,12 +38,20 @@ function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSe
     </div>
 }
 
+// let todoList =[
+//   { text: "Learn about React" , isImportant: false, time: new Date(), status: 0 , id:1},
+//   { text: "Meet friend for lunch" ,isImportant: true, time: new Date() ,status: 1, id:2},
+//   { text: "Build really cool todo app", isImportant: false , time: new Date(),status: 4, id:3},
+//   { text: "Implement all functional requirement", isImportant: false , time: new Date(),status: 2, id:4},
+//   { text: "Sync in local storage.", isImportant: false , time: new Date(),status: 3, id:5}
+// ];
+let k=0;
 let todoList =[
-  { text: "Learn about React" , isImportant: false, time: new Date(), status: 0},
-  { text: "Meet friend for lunch" ,isImportant: true, time: new Date() ,status: 1},
-  { text: "Build really cool todo app", isImportant: false , time: new Date(),status: 4},
-  { text: "Implement all functional requirement", isImportant: false , time: new Date(),status: 2},
-  { text: "Sync in local storage.", isImportant: false , time: new Date(),status: 3}
+  { text: "Learn about React" , isImportant: false, time: new Date(), status: 0 , id:`item-${k++}`},
+  { text: "Meet friend for lunch" ,isImportant: true, time: new Date() ,status: 1, id:`item-${k++}`},
+  { text: "Build really cool todo app", isImportant: false , time: new Date(),status: 4, id:`item-${k++}`},
+  { text: "Implement all functional requirement", isImportant: false , time: new Date(),status: 2, id:`item-${k++}`},
+  { text: "Sync in local storage.", isImportant: false , time: new Date(),status: 3, id:`item-${k++}`}
 ];
 
 function TodoApp(){
@@ -63,7 +76,8 @@ function TodoApp(){
     
       const addTodo = text =>{
           //  const newTodo = [...todos , {text: text,isImportant: false, time: new Date(),status: 0}];
-          todoList.push({text: text,isImportant: false, time: new Date(),status: 0});
+          let dynamic_id= 6;
+          todoList.push({text: text,isImportant: false, time: new Date(),status: 0, id: `item-${++dynamic_id}`});
          // setTodos(newTodo);
           setTodos(Array.from(todoList));
       }
@@ -77,7 +91,7 @@ function TodoApp(){
 
       const onEditTodo = index =>{
         if(editing) {
-          debugger
+        //  debugger
           const slicedTodo = todoList.splice(index,1);
           setTodos(Array.from(todoList)); 
           setEditing(false);
@@ -96,6 +110,8 @@ function TodoApp(){
       }
 
       const onStatusSelect = (status ,index) =>{
+        console.log(status);
+      //  debugger
         let newTodo = [...todos];
         newTodo[index].status = status_options.indexOf(status.value);
        setTodos(newTodo);
@@ -106,10 +122,17 @@ function TodoApp(){
         setSearchNote(searchString);
       }
 
+      const onSortClick = sort =>{
+        todoList.sort((a, b) => (a.id > b.id) ? 1 : -1); 
+        setTodos(Array.from(todoList));
+       // console.log(todoList);
+        //debugger
+      }
+
     return(<div className="app">
       <h1>Todo CRUD</h1>
-      <DND/>
-      <TodoSearch searchTodo={searchTodo}/>
+      {/* <DND/> */}
+      <TodoSearch searchTodo={searchTodo} onSortClick={onSortClick}/>
     <div className="todo-list">
       {todos.map((todo, index) => (
         <Todo

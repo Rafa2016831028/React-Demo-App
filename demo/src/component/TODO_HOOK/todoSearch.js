@@ -13,9 +13,12 @@ const TodoSearch = ((props) => {
         placeholder="Search note."
         onChange={(e) => props.searchTodo(e.target.value)} ></input>
         {/* <button type="submit" className="button2"><i class="fa fa-search"></i></button> */}
-        <Select/>
+        {/* <Select/> */}
+        <button type="submit" className="button2" onClick={(e) => props.onSortClick(e)}>Sort</button>
     </form></div>)
 });
+
+
 
 class Select extends React.Component {
     constructor(props) {
