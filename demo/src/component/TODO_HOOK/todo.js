@@ -122,19 +122,12 @@ function TodoApp(){
         setSearchNote(searchString);
       }
 
-      const onSortClick = sort =>{
-        //todos.sort((a, b) => (a.id > b.id) ? 1 : -1); 
-        //setTodos(Array.from(todoList));
-       // todoList.sort((a, b) => (a.id > b.id) ? 1 : -1);
-        sort.preventDefault();
+      const onSortClick = event =>{
+        event.preventDefault();
         console.log("render");
-      //  todoList.sort((a, b) => (a.text.toLowerCase > b.text.toLowerCase) ? 1 : -1);
-        todoList.sort((a, b) => (a.id > b.id) ? 1 : -1);
+        todoList.sort((a, b) => (a.text.toLowerCase > b.text.toLowerCase) ? 1 : -1);
+       // todoList.sort((a, b) => (a.id > b.id) ? 1 : -1);
         setTodos(todoList)
-       // console.log(todoList);
-        //debugger
-        
-        
       }
 
     return(<div className="app">
