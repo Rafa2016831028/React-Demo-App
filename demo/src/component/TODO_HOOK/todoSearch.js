@@ -14,7 +14,7 @@ const TodoSearch = ((props) => {
         onChange={(e) => props.searchTodo(e.target.value)} ></input>
         {/* <button type="submit" className="button2"><i class="fa fa-search"></i></button> */}
         {/* <Select/> */}
-        <button type="submit" className="button2" onClick={(e) => props.onSortClick(e)}>Sort</button>
+        <button type="submit" className="button2" onClick={(props.onSortClick)}>Sort</button>
     </form></div>)
 });
 

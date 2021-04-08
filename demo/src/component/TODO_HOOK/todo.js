@@ -123,10 +123,18 @@ function TodoApp(){
       }
 
       const onSortClick = sort =>{
-        todoList.sort((a, b) => (a.id > b.id) ? 1 : -1); 
-        setTodos(Array.from(todoList));
+        //todos.sort((a, b) => (a.id > b.id) ? 1 : -1); 
+        //setTodos(Array.from(todoList));
+       // todoList.sort((a, b) => (a.id > b.id) ? 1 : -1);
+        sort.preventDefault();
+        console.log("render");
+      //  todoList.sort((a, b) => (a.text.toLowerCase > b.text.toLowerCase) ? 1 : -1);
+        todoList.sort((a, b) => (a.id > b.id) ? 1 : -1);
+        setTodos(todoList)
        // console.log(todoList);
         //debugger
+        
+        
       }
 
     return(<div className="app">
