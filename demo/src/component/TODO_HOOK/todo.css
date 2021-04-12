@@ -34,8 +34,9 @@
     background-color: white; 
     color: black; 
     border: 2px solid #008CBA;
-    max-width: 100px;
-    margin: 5px;
+    max-width: 90px;
+    max-height: 35px;
+    margin: 10px 5px 5px 5px;
   }
 
   .input2 {
@@ -53,14 +54,6 @@
     flex-direction: row !important;
   }
 
-  .dropdown {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #008CBA;
-    max-width: 100px;
-    /* max-height: 40px; */
-    margin: 5px;
-  }
 
   .search-form {
     box-sizing: border-box;
@@ -75,18 +68,15 @@
     padding: 2px;
   }
 
-  .blue {
-    background-color: blue;
+  .dropdown {
+    margin-top: 8px !important;
+    margin-left: 3px !important;
+    margin-right: 5PX !important;
   }
-  .green {
-    background-color: green;
-  }
-  .red {
-    background-color: red;
-  }
-  .yellow {
-    background-color: yellow;
-  }
-  .orange {
-    background-color: orange;
+
+  @media only screen and (max-width: 558px) {
+    [class*="button2"] {
+      max-width: 10% ;
+      margin: 10px 5px 3px 3px;
+    }
   }

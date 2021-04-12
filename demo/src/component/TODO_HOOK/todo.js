@@ -1,21 +1,16 @@
 import './todo.css';
 import TodoForm from './todoInput';
 import React,{ useState , useRef , forwardRef, useImperativeHandle} from 'react';
-import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import TodoSearch from './todoSearch';
 import { IconContext } from "react-icons";
 import {AiFillStar} from 'react-icons/ai';
+import DropdownComponent from './dropdown';
 
 
-
-const status_options =["Pending","progressing","Completed","Rejected","Postponed"];
+const status_options =["Pending","progressing","Completed","Postponed","Rejected"];
 const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-const status_option_modified =[{ value: 'Pending', label: 'Pending', className: 'blue' },
-{ value: 'Progressing', label: 'Progressing', className: 'orange' },
-{ value: 'Completed', label: 'Completed', className: 'green' },
-{ value: 'Rejected', label: 'Rejected', className: 'red' },
-{ value: 'Postponed', label: 'Postponed', className: 'yellow' }];
+ 
 
 function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSelect}){
     return <div className="todo" 
@@ -29,7 +24,13 @@ function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSe
         <div>{weekday[todo.time.getDay()]}, {todo.time.getDate()}, {todo.time.getMonth()}, {todo.time.getFullYear()}</div></div>
         
         <div className="property">
-        <Dropdown className="dropdown"  options={status_option_modified} onChange={(e) => onStatusSelect(e, index)} value={status_options[todo.status]} placeholder="Status" />
+        {/* <Dropdown className="dropdown"  options={status_option_modified} onChange={(e) => onStatusSelect(e, index)} value={status_options[todo.status]} placeholder="Status" /> */}
+        <DropdownComponent 
+        className="dropdown"
+        onStatusSelect ={onStatusSelect}
+        index={index}
+        todo={todo}
+        />
         <button class="button2" onClick={() => onEditTodo(index)}>Edit</button>
         <button  class="button2" onClick={() => onRemoveTodo(index)}>Remove</button>
         {/* <button class="button2" onClick={() => onImportantTodo(index)}>{todo.isImportant?"Important":"Not Important"}</button> */}
@@ -132,7 +133,6 @@ function TodoApp(){
 
     return(<div className="app">
       <h1>Todo CRUD</h1>
-      {/* <DND/> */}
       <TodoSearch searchTodo={searchTodo} onSortClick={onSortClick}/>
     <div className="todo-list">
       {todos.map((todo, index) => (

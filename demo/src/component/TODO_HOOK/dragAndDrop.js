@@ -1,4 +1,4 @@
-import React, { Component,useState } from "react";
+
 import ReactDOM from "react-dom";
 import {
   List,
@@ -12,6 +12,16 @@ import RootRef from "@material-ui/core/RootRef";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import InboxIcon from "@material-ui/icons/Inbox";
 import EditIcon from "@material-ui/icons/Edit";
+import './todo.css';
+import TodoForm from './todoInput';
+import React,{ useState , useRef , forwardRef, useImperativeHandle} from 'react';
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
+import TodoSearch from './todoSearch';
+import { IconContext } from "react-icons";
+import {AiFillStar} from 'react-icons/ai';
+
+
 let k=0;
 let todoList =[
     { text: "Learn about React" , isImportant: false, time: new Date(), status: 0 , id:`item-${k++}`},
@@ -51,42 +61,30 @@ const getListStyle = isDraggingOver => ({
   //background: isDraggingOver ? 'lightblue' : 'lightgrey',
 });
 
-class DND extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-       items: [...todoList]
-    };
-    this.onDragEnd = this.onDragEnd.bind(this);
-  }
-
-  onDragEnd(result) {
+function DND({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSelect}) {
+  const [items, setItems] = useState([...todoList]);
+  const onDragEnd =(result) => {
     // dropped outside the list
     if (!result.destination) {
       return;
     }
-
-    const items = reorder(
-      this.state.items,
+    const items_ = reorder(
+      items,
       result.source.index,
       result.destination.index
     );
-
-    this.setState({
-      items
-    });
+    setItems(items_);
   }
 
   // Normally you would want to split things out into separate components.
   // But in this example everything is just done in one place for simplicity
-  render() {
-    return (
-      <DragDropContext onDragEnd={this.onDragEnd}>
+    return (<div>
+      <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId="droppable">
           {(provided, snapshot) => (
             <RootRef rootRef={provided.innerRef}>
               <List style={getListStyle(snapshot.isDraggingOver)}>
-                {this.state.items.map((item, index) => (
+                {items.map((item, index) => (
                   <Draggable key={item.id} draggableId={item.id} index={index}>
                     {(provided, snapshot) => (
                       <ListItem
@@ -107,9 +105,7 @@ class DND extends Component {
                           secondary={item.secondary}
                         />
                         <ListItemSecondaryAction>
-                          {/* <IconButton>
-                            <EditIcon />
-                          </IconButton> */}
+                          
                         </ListItemSecondaryAction>
                       </ListItem>
                     )}
@@ -121,7 +117,6 @@ class DND extends Component {
           )}
         </Droppable>
       </DragDropContext>
-    );
-  }
-}
+    </div>);
+}                      
 export default DND;
