@@ -32,12 +32,12 @@ function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSe
         index={index}
         todo={todo}
         />
-        {/* <div className="property-button">
+        <div className="property-button">
         <button class="button2" onClick={() => onEditTodo(index)}>Edit</button>
         <button  class="button2" onClick={() => onRemoveTodo(index)}>Remove</button>
-        </div> */}
-        <button class="button2" onClick={() => onEditTodo(index)}>Edit</button>
-        <button  class="button2" onClick={() => onRemoveTodo(index)}>Remove</button>
+        </div>
+        {/* <button class="button2" onClick={() => onEditTodo(index)}>Edit</button>
+        <button  class="button2" onClick={() => onRemoveTodo(index)}>Remove</button> */}
         {/* <button class="button2" onClick={() => onImportantTodo(index)}>{todo.isImportant?"Important":"Not Important"}</button> */}
         
         </div>
