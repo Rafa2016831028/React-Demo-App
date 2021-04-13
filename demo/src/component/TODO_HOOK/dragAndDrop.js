@@ -83,7 +83,8 @@ function DND({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSel
         <Droppable droppableId="droppable">
           {(provided, snapshot) => (
             <RootRef rootRef={provided.innerRef}>
-              <List style={getListStyle(snapshot.isDraggingOver)}>
+              <List style={getListStyle(snapshot.isDraggingOver)}
+              >
                 {items.map((item, index) => (
                   <Draggable key={item.id} draggableId={item.id} index={index}>
                     {(provided, snapshot) => (
@@ -105,7 +106,9 @@ function DND({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSel
                           secondary={item.secondary}
                         />
                         <ListItemSecondaryAction>
-                          
+                        {/* <Dropdown className="dropdown"  options={status_option_modified} onChange={(e) => onStatusSelect(e, index)} value={status_options[todo.status]} placeholder="Status" /> */}
+                       <button class="button2" onClick={() => onEditTodo(index)}>Edit</button>
+                       <button  class="button2" onClick={() => onRemoveTodo(index)}>Remove</button>
                         </ListItemSecondaryAction>
                       </ListItem>
                     )}
@@ -118,5 +121,9 @@ function DND({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSel
         </Droppable>
       </DragDropContext>
     </div>);
-}                      
+} 
+
+function TodoDndApp(){
+  return (<div></div>);
+}
 export default DND;

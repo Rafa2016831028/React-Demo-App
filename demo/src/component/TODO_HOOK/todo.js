@@ -16,21 +16,26 @@ function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSe
     return <div className="todo" 
     // style={{textDecoration: todo.isImportant? "line-through" : ""}}
     style ={{color:todo.isImportant? "blue": ""}} >
+      <div className="todo-body">
        <IconContext.Provider value={{color:todo.isImportant? "blue": "", size:"1.5em" , className: "global-class-name" }}>
             <div  onClick={() => onImportantTodo(index)} ><AiFillStar/></div>
         </IconContext.Provider>
         <div className="todo-items"> 
+        
         <div>{todo.text}</div>
         <div>{weekday[todo.time.getDay()]}, {todo.time.getDate()}, {todo.time.getMonth()}, {todo.time.getFullYear()}</div></div>
-        
+        </div>
         <div className="property">
         {/* <Dropdown className="dropdown"  options={status_option_modified} onChange={(e) => onStatusSelect(e, index)} value={status_options[todo.status]} placeholder="Status" /> */}
         <DropdownComponent 
-        className="dropdown"
         onStatusSelect ={onStatusSelect}
         index={index}
         todo={todo}
         />
+        {/* <div className="property-button">
+        <button class="button2" onClick={() => onEditTodo(index)}>Edit</button>
+        <button  class="button2" onClick={() => onRemoveTodo(index)}>Remove</button>
+        </div> */}
         <button class="button2" onClick={() => onEditTodo(index)}>Edit</button>
         <button  class="button2" onClick={() => onRemoveTodo(index)}>Remove</button>
         {/* <button class="button2" onClick={() => onImportantTodo(index)}>{todo.isImportant?"Important":"Not Important"}</button> */}
@@ -48,10 +53,10 @@ function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSe
 // ];
 let k=0;
 let todoList =[
-  { text: "Learn about React" , isImportant: false, time: new Date(), status: 0 , id:`item-${k++}`},
-  { text: "Meet friend for lunch" ,isImportant: true, time: new Date() ,status: 1, id:`item-${k++}`},
-  { text: "Build really cool todo app", isImportant: false , time: new Date(),status: 4, id:`item-${k++}`},
-  { text: "Implement all functional requirement", isImportant: false , time: new Date(),status: 2, id:`item-${k++}`},
+  { text: "Learn about React. React is a declarative, efficient, and flexible JavaScript library " , isImportant: false, time: new Date(), status: 0 , id:`item-${k++}`},
+  { text: "Meet friend for lunch, Say why you are hosting the luncheon party." ,isImportant: true, time: new Date() ,status: 1, id:`item-${k++}`},
+  { text: "Build really cool todo app, Best free app builder to create apps without coding efforts.", isImportant: false , time: new Date(),status: 4, id:`item-${k++}`},
+  { text: "Implement all functional requirement that are product features or functions that developers must implement ", isImportant: false , time: new Date(),status: 2, id:`item-${k++}`},
   { text: "Sync in local storage.", isImportant: false , time: new Date(),status: 3, id:`item-${k++}`}
 ];
 

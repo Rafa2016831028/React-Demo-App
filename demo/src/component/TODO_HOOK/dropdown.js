@@ -31,12 +31,13 @@ const colourStyles = {
   control: (styles) => ({
     ...styles,
     backgroundColor: "white",
-    width: "160px"
+    width: "140px"
   }),
 
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
     const color = chroma(data.color);
-   // debugger;
+    // console.log(window.innerWidth)
+    // debugger;
     return {
       ...styles,
       backgroundColor: isDisabled
@@ -70,7 +71,7 @@ const colourStyles = {
 function DropdownComponent ({todo, onStatusSelect, index}){
   const handleSelect = (event) =>{
     debugger
-    console.log(event)
+    console.log(window.innerWidth)
     onStatusSelect(event, index)
     console.log(todo);
   }

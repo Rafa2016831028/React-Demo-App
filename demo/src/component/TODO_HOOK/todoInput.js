@@ -14,7 +14,6 @@ const TodoForm = forwardRef((props, ref) => {
       const editInput = todo =>{
           console.log(todo);
           setTodo(todo[0].text);
-         // debugger
       }
 
     const handleSubmit = e => {
@@ -29,7 +28,7 @@ const TodoForm = forwardRef((props, ref) => {
         setTodo(e.target.value)
     }
 
-    return (<form onSubmit={handleSubmit} className="todo">
+    return (<form onSubmit={handleSubmit} className="search-todo">
         <input  type="text"
         className="input2"
         value={todo} 
