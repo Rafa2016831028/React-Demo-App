@@ -15,10 +15,10 @@ const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSelect}){
     return <div className="todo" 
     // style={{textDecoration: todo.isImportant? "line-through" : ""}}
-    style ={{color:todo.isImportant? "blue": ""}} >
+    style ={{color:todo.isImportant? "red": ""}} >
       <div className="todo-body">
-       <IconContext.Provider value={{color:todo.isImportant? "blue": "", size:"1.5em" , className: "global-class-name" }}>
-            <div  onClick={() => onImportantTodo(index)} ><AiFillStar/></div>
+       <IconContext.Provider  value={{ color:todo.isImportant? "red": "white", size:"1.5em" , className: "icon" }}>
+            <div  onClick={() => onImportantTodo(index)} ><AiFillStar stroke={"red"} stroke-width={70}/></div>
         </IconContext.Provider>
         <div className="todo-items"> 
         
@@ -52,13 +52,6 @@ let todoList =[
   { text: "Sync in local storage.", isImportant: false , time: new Date(),status: 3, id:5}
 ];
 let k=0;
-// let todoList =[
-//   { text: "Learn about React. React is a declarative, efficient, and flexible JavaScript library " , isImportant: false, time: new Date(), status: 0 , id:`item-${k++}`},
-//   { text: "Meet friend for lunch, Say why you are hosting the luncheon party." ,isImportant: true, time: new Date() ,status: 1, id:`item-${k++}`},
-//   { text: "Build really cool todo app, Best free app builder to create apps without coding efforts.", isImportant: false , time: new Date(),status: 4, id:`item-${k++}`},
-//   { text: "Implement all functional requirement that are product features or functions that developers must implement ", isImportant: false , time: new Date(),status: 2, id:`item-${k++}`},
-//   { text: "Sync in local storage.", isImportant: false , time: new Date(),status: 3, id:`item-${k++}`}
-// ];
 
 function TodoApp(){
 
@@ -78,6 +71,10 @@ function TodoApp(){
       React.useEffect(() => {
         window.localStorage.setItem('todo', JSON.stringify(todoList));
       }, [todos]);
+      // React.useEffect(() => {
+      //   debugger
+      //   todoList = JSON.parse(localStorage.getItem("todo"))
+      // },[])
 
     
       const addTodo = (text,editedTodoInfo) =>{
