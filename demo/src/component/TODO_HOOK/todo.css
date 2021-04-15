@@ -1,6 +1,5 @@
 .app {
     background: #F0F8FF;
-    height: 100vh;
     padding-top: 30px;
     padding-left: 70px;
     padding-right: 70px;
@@ -164,5 +163,11 @@
     [class*="property-button"] {
       display: flex;
       flex-direction: row !important;
+    }
+  }
+
+  @media only screen and (min-height: 670px) {
+    [class*="app"]{
+      height: 100vh;
     }
   }

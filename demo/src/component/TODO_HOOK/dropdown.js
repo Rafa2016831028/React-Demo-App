@@ -70,7 +70,7 @@ const colourStyles = {
 
 function DropdownComponent ({todo, onStatusSelect, index}){
   const handleSelect = (event) =>{
-    debugger
+  //  debugger
     console.log(window.innerWidth)
     onStatusSelect(event, index)
     console.log(todo);

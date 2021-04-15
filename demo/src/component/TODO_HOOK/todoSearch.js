@@ -20,29 +20,29 @@ const TodoSearch = ((props) => {
 
 
 
-class Select extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {color: 'blue'};
-    }
+// class Select extends React.Component {
+//     constructor(props) {
+//       super(props);
+//       this.state = {color: 'blue'};
+//     }
   
-      changeColor(e) {
-        this.setState({
-          color: e.target.value
-      })
-    }
+//       changeColor(e) {
+//         this.setState({
+//           color: e.target.value
+//       })
+//     }
     
-    render() {
-      return (
-              <div>
-                 <select className="customized-dropdown" style={{backgroundColor: this.state.color}} ref="dropDownColor" onChange={this.changeColor.bind(this)}>
-                        <option value="aqua" style={{color: 'blue',height:"20px !important",backgroundColor:"white",fontSize: "14"}}>Blue</option>
-                        <option value="red" style={{color: 'red', backgroundColor:"white"}}>Red</option>
-                        <option value="orange" style={{color: 'orange',backgroundColor:"white"}}>Orange</option>
-                        <option value="green" style={{color: 'green',backgroundColor:"white"}}>Green</option>
-                  </select>
-              </div>
-      );
-    }
-  }
+//     render() {
+//       return (
+//               <div>
+//                  <select className="customized-dropdown" style={{backgroundColor: this.state.color}} ref="dropDownColor" onChange={this.changeColor.bind(this)}>
+//                         <option value="aqua" style={{color: 'blue',height:"20px !important",backgroundColor:"white",fontSize: "14"}}>Blue</option>
+//                         <option value="red" style={{color: 'red', backgroundColor:"white"}}>Red</option>
+//                         <option value="orange" style={{color: 'orange',backgroundColor:"white"}}>Orange</option>
+//                         <option value="green" style={{color: 'green',backgroundColor:"white"}}>Green</option>
+//                   </select>
+//               </div>
+//       );
+//     }
+//   }
 export default TodoSearch;

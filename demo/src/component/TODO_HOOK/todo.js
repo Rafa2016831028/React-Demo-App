@@ -22,7 +22,7 @@ function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSe
         </IconContext.Provider>
         <div className="todo-items"> 
         
-        <div>{todo.text}</div>
+        <div>{todo.id} . {todo.text}</div>
         <div>{weekday[todo.time.getDay()]}, {todo.time.getDate()}, {todo.time.getMonth()}, {todo.time.getFullYear()}</div></div>
         </div>
         <div className="property">
@@ -44,21 +44,21 @@ function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSe
     </div>
 }
 
-// let todoList =[
-//   { text: "Learn about React" , isImportant: false, time: new Date(), status: 0 , id:1},
-//   { text: "Meet friend for lunch" ,isImportant: true, time: new Date() ,status: 1, id:2},
-//   { text: "Build really cool todo app", isImportant: false , time: new Date(),status: 4, id:3},
-//   { text: "Implement all functional requirement", isImportant: false , time: new Date(),status: 2, id:4},
-//   { text: "Sync in local storage.", isImportant: false , time: new Date(),status: 3, id:5}
-// ];
-let k=0;
 let todoList =[
-  { text: "Learn about React. React is a declarative, efficient, and flexible JavaScript library " , isImportant: false, time: new Date(), status: 0 , id:`item-${k++}`},
-  { text: "Meet friend for lunch, Say why you are hosting the luncheon party." ,isImportant: true, time: new Date() ,status: 1, id:`item-${k++}`},
-  { text: "Build really cool todo app, Best free app builder to create apps without coding efforts.", isImportant: false , time: new Date(),status: 4, id:`item-${k++}`},
-  { text: "Implement all functional requirement that are product features or functions that developers must implement ", isImportant: false , time: new Date(),status: 2, id:`item-${k++}`},
-  { text: "Sync in local storage.", isImportant: false , time: new Date(),status: 3, id:`item-${k++}`}
+  { text: "Learn about React. React is a declarative, efficient, and flexible JavaScript library " , isImportant: false, time: new Date(), status: 0 , id:1},
+  { text: "Meet friend for lunch, Say why you are hosting the luncheon party." ,isImportant: true, time: new Date() ,status: 1, id:2},
+  { text: "Build really cool todo app, Best free app builder to create apps without coding efforts.", isImportant: false , time: new Date(),status: 4, id:3},
+  { text: "Implement all functional requirement that are product features or functions that developers must implement", isImportant: false , time: new Date(),status: 2, id:4},
+  { text: "Sync in local storage.", isImportant: false , time: new Date(),status: 3, id:5}
 ];
+let k=0;
+// let todoList =[
+//   { text: "Learn about React. React is a declarative, efficient, and flexible JavaScript library " , isImportant: false, time: new Date(), status: 0 , id:`item-${k++}`},
+//   { text: "Meet friend for lunch, Say why you are hosting the luncheon party." ,isImportant: true, time: new Date() ,status: 1, id:`item-${k++}`},
+//   { text: "Build really cool todo app, Best free app builder to create apps without coding efforts.", isImportant: false , time: new Date(),status: 4, id:`item-${k++}`},
+//   { text: "Implement all functional requirement that are product features or functions that developers must implement ", isImportant: false , time: new Date(),status: 2, id:`item-${k++}`},
+//   { text: "Sync in local storage.", isImportant: false , time: new Date(),status: 3, id:`item-${k++}`}
+// ];
 
 function TodoApp(){
 
@@ -80,11 +80,15 @@ function TodoApp(){
       }, [todos]);
 
     
-      const addTodo = text =>{
+      const addTodo = (text,editedTodoInfo) =>{
           //  const newTodo = [...todos , {text: text,isImportant: false, time: new Date(),status: 0}];
-          let dynamic_id= 6;
-          todoList.push({text: text,isImportant: false, time: new Date(),status: 0, id: `item-${++dynamic_id}`});
-         // setTodos(newTodo);
+          let dynamic_id= todoList.length;
+        
+          if(editedTodoInfo.length){
+            todoList.push({text: text,isImportant: editedTodoInfo[0].isImportant, time: editedTodoInfo[0].time,status: editedTodoInfo[0].status, id: editedTodoInfo[0].id})
+          } else {
+            todoList.push({text: text,isImportant: false, time: new Date(),status: 0, id: ++dynamic_id})
+          }
           setTodos(Array.from(todoList));
       }
 
@@ -97,7 +101,6 @@ function TodoApp(){
 
       const onEditTodo = index =>{
         if(editing) {
-        //  debugger
           const slicedTodo = todoList.splice(index,1);
           setTodos(Array.from(todoList)); 
           setEditing(false);
@@ -117,7 +120,6 @@ function TodoApp(){
 
       const onStatusSelect = (status ,index) =>{
         console.log(status);
-      //  debugger
         let newTodo = [...todos];
         newTodo[index].status = status_options.indexOf(status.value);
        setTodos(newTodo);
@@ -130,9 +132,7 @@ function TodoApp(){
 
       const onSortClick = event =>{
         event.preventDefault();
-        console.log("render");
-        todoList.sort((a, b) => (a.text.toLowerCase > b.text.toLowerCase) ? 1 : -1);
-       // todoList.sort((a, b) => (a.id > b.id) ? 1 : -1);
+        todoList.sort((a, b) => (a.id > b.id) ? 1 : -1);
         setTodos(todoList)
       }
 
