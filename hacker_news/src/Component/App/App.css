@@ -1,0 +1,29 @@
+.container1 {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.item{
+  height :auto !important;
+  background-color:#f6f6ef;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 10pt;
+  padding: 5px 5px 2px 2px;
+}
+
+a:link {
+  margin-left: 10px;
+  font-size: 13px;
+  color: #000000;
+  text-decoration: none  !important;
+}
+
+.item-des {
+  text-decoration: none ;
+  font-size: 9px !important;
+  color: #828282;
+  margin-left: 10px;
+}
+.icon-index{
+  color: #828282;
+}
