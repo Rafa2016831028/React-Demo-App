@@ -1,3 +1,0 @@
-function FruitCartApplication (){
-    const 
-}

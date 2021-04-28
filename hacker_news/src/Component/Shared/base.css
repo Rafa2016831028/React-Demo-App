@@ -1,5 +1,6 @@
 .container1 {
     font-family: Verdana, Geneva, sans-serif;
+    background-color:#f6f6ef;
   }
   
   .item{
@@ -30,4 +31,23 @@
   
   .margin-left-10 {
     margin-left: 10px;
+  }
+
+  .jobtext {
+      margin: 5px 5px 10px 10px;
+      font-size: 10pt;
+  }
+
+  .highlight-jobtext {
+    text-decoration: underline;
+    color: black;
+  }
+
+  button {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    font-size: 9px !important;
+    color:  #828282;
+    cursor: pointer;
   }

@@ -11,7 +11,11 @@ import DropdownComponent from './dropdown';
 const status_options =["Pending","progressing","Completed","Postponed","Rejected"];
 const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
  
+window.onload = function() {
 
+  todoList = JSON.parse(localStorage.getItem("todos"));
+  debugger
+}
 function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSelect}){
     return <div className="todo" 
     // style={{textDecoration: todo.isImportant? "line-through" : ""}}
@@ -23,7 +27,10 @@ function Todo({todo, index ,onImportantTodo,onEditTodo, onRemoveTodo, onStatusSe
         <div className="todo-items"> 
         
         <div>{todo.id} . {todo.text}</div>
-        <div>{weekday[todo.time.getDay()]}, {todo.time.getDate()}, {todo.time.getMonth()}, {todo.time.getFullYear()}</div></div>
+        <div>
+          {/* {weekday[todo.time.getDay()]}, {todo.time.getDate()}, {todo.time.getMonth()}, {todo.time.getFullYear()} */}
+          {todo.time.toString()}
+          </div></div>
         </div>
         <div className="property">
         {/* <Dropdown className="dropdown"  options={status_option_modified} onChange={(e) => onStatusSelect(e, index)} value={status_options[todo.status]} placeholder="Status" /> */}
@@ -48,7 +55,7 @@ let todoList =[
   { text: "Learn about React. React is a declarative, efficient, and flexible JavaScript library " , isImportant: false, time: new Date(), status: 0 , id:1},
   { text: "Meet friend for lunch, Say why you are hosting the luncheon party." ,isImportant: true, time: new Date() ,status: 1, id:2},
   { text: "Build really cool todo app, Best free app builder to create apps without coding efforts.", isImportant: false , time: new Date(),status: 4, id:3},
-  { text: "Implement all functional requirement that are product features or functions that developers must implement", isImportant: false , time: new Date(),status: 2, id:4},
+  { text: "Implement all functional requirement that are product features that developers must implement", isImportant: false , time: new Date(),status: 2, id:4},
   { text: "Sync in local storage.", isImportant: false , time: new Date(),status: 3, id:5}
 ];
 let k=0;
@@ -58,7 +65,11 @@ function TodoApp(){
   const ref = useRef(null);
 
   const [searchNote , setSearchNote] = useState("");
-  const [todos, setTodos] = React.useState(todoList);
+  const [todos, setTodos] = React.useState([], () => {
+    debugger
+    const localData = localStorage.getItem('todos');
+    return localData ? JSON.parse(localData) : [];
+});
   const [editing, setEditing] = useState(true);
 
       React.useEffect(() => {
@@ -69,14 +80,14 @@ function TodoApp(){
       }, [searchNote]);
 
       React.useEffect(() => {
-        window.localStorage.setItem('todo', JSON.stringify(todoList));
+        window.localStorage.setItem('todos', JSON.stringify(todoList));
       }, [todos]);
-      // React.useEffect(() => {
-      //   debugger
-      //   todoList = JSON.parse(localStorage.getItem("todo"))
-      // },[])
+      React.useEffect(() => {
+        debugger
+        console .log(todos)
+        todoList = JSON.parse(localStorage.getItem("todos"))
+      },[])
 
-    
       const addTodo = (text,editedTodoInfo) =>{
           //  const newTodo = [...todos , {text: text,isImportant: false, time: new Date(),status: 0}];
           let dynamic_id= todoList.length;

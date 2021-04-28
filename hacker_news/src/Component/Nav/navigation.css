@@ -44,3 +44,12 @@
  margin: 4px 4px 4px 4px !important;
  text-decoration: none !important;
 }
+
+.link:visited:after{
+    font-size: 18px;
+    color: wheat !important ;
+  }
+
+  a:visited {
+    color: black;
+  }
