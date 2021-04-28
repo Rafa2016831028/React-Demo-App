@@ -1,0 +1,20 @@
+.img {
+    width: 500px;
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text {
+    margin-left: 20px;
+    font-family: Verdana;
+    font-size: 8.5pt;
+    line-height: 138%;
+    font-style: normal;
+    text-align: start;
+    border-spacing: 2px;
+    font-variant: normal;
+    width: 500px;
+}
