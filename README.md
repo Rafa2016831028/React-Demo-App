@@ -1,7 +1,7 @@
 # React-Demo-App
 This is a dummy react app that i build while learning react (javascript framework) for my work. I intend to build a shopping app that implement React CRUD operation of different items in frontend.
 
-# Todo CRUD app requirements
+# Task 1 : Todo CRUD app requirements
 
 1. add new note
 2. added notes will be psuhed into a list
@@ -22,4 +22,13 @@ b. note status
 8. note can be re ordered (by drag and drop/by changing note serial number)
 9. apply css to beautify the note
 10. notes will be saved in browser localstorage, on each add, edit, delete, the note list will be synced with localstorage
-11. mark as important by color
+11. mark as important by color.
+
+
+# Task 2 : Hacker news clone app 
+
+Trying to make a clone of [Hacker news app](https://news.ycombinator.com/)
+
+Api Docummentation [here](https://hackernews.api-docs.io/v0/overview/introduction)
+
+
