@@ -15,6 +15,16 @@ export const getStories = async (type) => {
       const { data: storyIds } = await axios.get(
         `${BASE_API_URL}/${type}stories.json`
       );
+      console.log(storyIds)
+      const stories = await Promise.all(storyIds.slice(0, 30).map(getStory));
+      return stories;
+    } catch (error) {
+      console.log('Error while getting list of stories.');
+    }
+  };
+
+  export const getStoriesByIdList = async (storyIds) => {
+    try {
       const stories = await Promise.all(storyIds.slice(0, 30).map(getStory));
       return stories;
     } catch (error) {

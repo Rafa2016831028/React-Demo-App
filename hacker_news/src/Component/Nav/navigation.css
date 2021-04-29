@@ -24,7 +24,16 @@
     color:black;
     line-height: 12pt;
 }
+@media only screen and (max-width: 340px) {
+    /* For mobile phones: */
+    [class*="nav"] {
+      height: auto ;
+    }
+  }
 
+.nav-items Link:hover{
+    color: wheat !important;
+}
 .nav-items {
     margin: 5px 5px 5px 5px;
     color: black;
@@ -49,7 +58,8 @@
     font-size: 18px;
     color: wheat !important ;
   }
-
+  
   a:visited {
     color: black;
   }
+
