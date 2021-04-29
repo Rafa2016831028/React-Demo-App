@@ -40,7 +40,7 @@ const AskCommentStories = (props) => {
 export const Story =({key, story, index}) =>{
     return (
       <div className="container1">
-          <div className='flex-col' key={key}>
+          <div className='item' key={key}>
             {/* <div className="icon-index">{index}. </div> */}
             <div><TiArrowSortedUp color="#828282" /></div> 
             <div className="item-des margin-left-10"> {story.score} points by {story.by}  | {timeSince(new Date(Date.now()-(story.time/100000)))} ago  </div>
