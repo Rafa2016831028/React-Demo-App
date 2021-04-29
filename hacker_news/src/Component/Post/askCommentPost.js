@@ -43,8 +43,9 @@ export const Story =({key, story, index}) =>{
           <div className='item' key={key}>
             {/* <div className="icon-index">{index}. </div> */}
             <div><TiArrowSortedUp color="#828282" /></div> 
-            <div className="item-des margin-left-10"> {story.score} points by {story.by}  | {timeSince(new Date(Date.now()-(story.time/100000)))} ago  </div>
-            <div > <div><a href={story.url ? story.url : 'https://news.ycombinator.com/newest'} dangerouslySetInnerHTML={ {__html: story.text} } ></a><a className="item-des"> ({story.url? processUrl(story.url): 'http://www.sitename.com/'})</a></div> 
+            <div>
+                <div className="item-des margin-left-10"> {story.by}  | {timeSince(new Date(Date.now()-(story.time/100000)))} ago  </div>
+             <div className="margin-left-10 margin-top-4 font" dangerouslySetInnerHTML={ {__html: story.text} } ></div> 
             
             </div>
           </div>
