@@ -40,7 +40,7 @@ const AskCommentStories = (props) => {
 export const Story =({key, story, index}) =>{
     return (
       <div className="container1">
-          <div className='item' key={key}>
+          <div className='item margin-top-4' key={key}>
             {/* <div className="icon-index">{index}. </div> */}
             <div><TiArrowSortedUp color="#828282" /></div> 
             <div>
