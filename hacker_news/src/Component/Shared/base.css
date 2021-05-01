@@ -35,7 +35,10 @@
     margin-left: 10px;
   }
   .margin-left-5 {
-    margin-left: 5px;
+    margin-left: 5px !important;
+  }
+  .margin-left-2 {
+    margin-left: 2px !important;
   }
   .margin-top-4 {
     margin-top: 4px;

@@ -22,6 +22,13 @@ const ShowNewStories = (props) => {
     setStory(storyTemp);
     debugger
   }
+
+  const newStoryPast = (index , e, story) => {
+    // e.preventDefault();
+    alert("Past Feature not clear..");
+    console.warn(story);
+   // debugger
+  }
   return (
     <React.Fragment>
       {isLoading ? (
@@ -29,7 +36,7 @@ const ShowNewStories = (props) => {
       ) : (
         <React.Fragment>
           {story.map(({ data: story }, index) => (
-            <Story key={story.id} story={story} index={index} newStoryHide={newStoryHide}/>
+            <Story key={story.id} story={story} index={index} newStoryHide={newStoryHide} newStoryPast={newStoryPast}/>
           ))}
         </React.Fragment>
       )}
@@ -37,13 +44,13 @@ const ShowNewStories = (props) => {
   );
 };
 
-export const Story =({key, story, index, newStoryHide}) =>{
+export const Story =({key, story, index, newStoryHide, newStoryPast}) =>{
   return (
     <div className="container1">
         <div className='item' key={key}>
           <div className="icon-index">{index}. </div> <TiArrowSortedUp color="#828282" />
           <div > <div><a href={story.url ? story.url : 'https://news.ycombinator.com/newest'}  >{story.title}</a><a className="item-des"> ({story.url? processUrl(story.url): 'http://www.sitename.com/'})</a></div> 
-          <div className="item-des margin-left-10"> {story.score} points by {story.by}  | {timeSince(new Date(Date.now()-(story.time/100000)))} ago   |  <button onClick={(e) => newStoryHide(index,e)}> hide</button> | past  </div>
+          <div className="item-des margin-left-10"> {story.score} points by {story.by}  | {timeSince(new Date(Date.now()-(story.time/100000)))} ago   |  <button onClick={(e) => newStoryHide(index,e)}> hide</button> | <button onClick={(e) => newStoryPast(index,e,story)}> past</button>  </div>
           </div>
         </div>
       

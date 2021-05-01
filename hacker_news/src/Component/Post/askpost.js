@@ -44,7 +44,7 @@ export const Story =({key, story, index, askStoryComments}) =>{
           <div className="icon-index">{index}. </div> <TiArrowSortedUp color="#828282" />
           <div > <div><a href={story.url ? story.url : 'https://news.ycombinator.com/newest'}  >{story.title}</a><a className="item-des"> ({story.url? processUrl(story.url): 'http://www.sitename.com/'})</a></div> 
           {/* <div className="item-des margin-left-10"> {story.score} points by {story.by}  | {timeSince(new Date(Date.now()-(story.time/100000)))} ago   | <button onClick={(e) => askStoryComments(story.kids,e)}> {story.kids? story.kids.length: 0} comments</button></div> */}
-          <div className="item-des margin-left-10"> {story.score} points by {story.by}  | {timeSince(new Date(Date.now()-(story.time/100000)))} ago   | <button><Link className="item-des icon-index" 
+          <div className="item-des margin-left-10"> {story.score} points by {story.by}  | {timeSince(new Date(Date.now()-(story.time/100000)))} ago   | <button><Link className="item-des icon-index margin-left-2" 
           to={{
     pathname: '/story/' + story.id,
     state: { comments: story.kids, story: story}
